@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Технічні роботи на сайті MIRALUX. Ми скоро повернемось!">
+    <meta name="keywords" content="технічні роботи, MIRALUX, сайт на обслуговуванні">
+    <meta name="author" content="MIRALUX">
+    <title>Технічні роботи | MIRALUX</title>
+    <!-- Подключение шрифта Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <!-- Favicon (если у тебя есть) -->
+    <link rel="shortcut icon" href="/favicon48.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon48.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .maintenance-container {
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 600;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        .icon {
+            font-size: 4em;
+            color: #00b4d8;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        a {
+            color: #00b4d8;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0093b0;
+        }
+
+        /* Анимация пульсации иконки */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .icon {
+                font-size: 3em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            .icon {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="maintenance-container">
+        <!-- Иконка (можно заменить на свою картинку) -->
+        <div class="icon">⚙️</div>
+        <h1>Технічні роботи</h1>
+        <p>Вибачте за тимчасові незручності! Наш сайт наразі перебуває на технічному обслуговуванні. Ми повернемось найближчим часом.</p>
+        <p>Зв’яжіться з нами через <a href="https://t.me/miralux_ua" target="_blank" rel="noopener noreferrer">Telegram</a>, якщо у вас є питання.</p>
+    </div>
+</body>
+</html>
