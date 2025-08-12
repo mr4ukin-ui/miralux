@@ -1,0 +1,155 @@
+/* Плавающая кнопка чата */
+.chat-btn {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background: #d4af37;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
+    opacity: 0; /* Начальное состояние для анимации */
+    transform: scale(0.8); /* Начальный масштаб */
+}
+
+.chat-btn[style*="display: flex"] {
+    animation: fadeInScale 0.5s ease forwards; /* Анимация при появлении */
+}
+
+.chat-btn i {
+    font-size: 1.2em;
+}
+
+.chat-btn:hover {
+    background: #252525;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Окно чата */
+.chat-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.chat-modal-content {
+    background: #252525;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 200px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    opacity: 0; /* Начальное состояние для анимации */
+    transform: translateY(20px); /* Начальный сдвиг вниз */
+}
+
+.chat-modal[style*="display: flex"] .chat-modal-content {
+    animation: fadeInUp 0.5s ease forwards; /* Анимация при открытии */
+}
+
+.chat-modal-content h3 {
+    color: #d4af37;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.chat-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.chat-options a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: none;
+    border: 1px solid #8f8d8d91;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chat-options a i {
+    color: #d4af37;
+    font-size: 1.2em;
+}
+
+.chat-options a:hover {
+    background: #1a1a1a;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Анимации */
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Используем существующий fadeInUp из styles.css */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .chat-btn {
+        bottom: 80px;
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .chat-modal-content {
+        padding: 15px;
+    }
+
+    .chat-modal-content h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-btn {
+        bottom: 60px;
+        padding: 6px 12px;
+        font-size: 0.85em;
+    }
+
+    .chat-modal-content {
+        width: 95%;
+    }
+}
